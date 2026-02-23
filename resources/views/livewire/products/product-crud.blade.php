@@ -1,5 +1,5 @@
 <div>
-    <flux:main container>
+    <flux:main>
         <div class="mb-6">
             <flux:heading size="xl">{{ $isEdit ? 'Editar Producto' : 'Nuevo Producto' }}</flux:heading>
         </div>
