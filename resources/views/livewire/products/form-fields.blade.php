@@ -9,7 +9,7 @@
 
    <section class="mt-5">
        <flux:heading variant="anchor">Precios e Inventario</flux:heading>
-       <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mt-4">
+       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
            <flux:input wire:model="form.cost_price" type="number" step="0.01" label="Costo Compra"
                icon="banknotes" />
            <flux:input wire:model="form.sale_price" type="number" step="0.01" label="Precio Venta"
