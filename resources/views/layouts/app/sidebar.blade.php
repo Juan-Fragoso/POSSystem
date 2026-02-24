@@ -20,8 +20,12 @@
                     {{ __('Dashboard') }}
                 </flux:sidebar.item>
                 <flux:sidebar.item icon="inbox-stack" :href="route('products.index')"
-                    :current="request()->routeIs('products.index')" wire:navigate>
+                    :current="request()->routeIs('products.*')" wire:navigate>
                     Productos
+                </flux:sidebar.item>
+                <flux:sidebar.item icon="users" :href="route('customers.index')"
+                    :current="request()->routeIs('customers.*')" wire:navigate>
+                    Clientes
                 </flux:sidebar.item>
             </flux:sidebar.group>
         </flux:sidebar.nav>
@@ -90,6 +94,8 @@
     {{ $slot }}
 
     @fluxScripts
+
+    <x-notification />
 </body>
 
 </html>
