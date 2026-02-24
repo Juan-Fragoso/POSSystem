@@ -38,7 +38,7 @@
         </flux:table>
     </flux:main>
 
-    <flux:modal name="delete-customer" class="min-w-[22rem]">
+    <flux:modal name="delete-customer" class="min-w-88">
         <div class="space-y-6">
             <div>
                 <flux:heading size="lg">¿Eliminar registro?</flux:heading>
