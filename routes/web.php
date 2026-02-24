@@ -14,4 +14,5 @@ require __DIR__.'/settings.php';
 
 Route::middleware('auth')->group(function () {
     require __DIR__.'/modules/products.php';
+    require __DIR__.'/modules/customers.php';
 });
