@@ -65,5 +65,6 @@
                     Confirmar Eliminación
                 </flux:button>
             </div>
-
         </div>
+    </flux:modal>
+</div>
