@@ -17,10 +17,10 @@ return new class extends Migration
             $table->timestamp('sale_date')->useCurrent();
             $table->foreignId('user_id')->constrained()->onDelete('no action');
             $table->foreignId('customer_id')->constrained()->onDelete('no action');
-            $table->decimal('total_qty', 10,2)->default(0);
-            $table->decimal('total_subtotal', 12,2)->default(0);
-            $table->decimal('total_taxes', 12,2)->default(0);
-            $table->decimal('total_amount', 12,2)->default(0);
+            $table->decimal('total_qty', 10, 2)->default(0);
+            $table->decimal('total_subtotal', 12, 2)->default(0);
+            $table->decimal('total_taxes', 12, 2)->default(0);
+            $table->decimal('total_amount', 12, 2)->default(0);
             $table->string('payment_method', 5)->nullable();
             $table->enum('status', ['draft', 'pending', 'completed', 'cancelled'])->default('draft');
             $table->timestamps();

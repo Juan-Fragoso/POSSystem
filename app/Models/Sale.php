@@ -24,11 +24,11 @@ class Sale extends Model
     ];
 
     protected $casts = [
-        'sale_date'      => 'datetime',
-        'total_qty'      => 'decimal:2',
+        'sale_date' => 'datetime',
+        'total_qty' => 'decimal:2',
         'total_subtotal' => 'decimal:2',
-        'total_taxes'    => 'decimal:2',
-        'total_amount'   => 'decimal:2',
+        'total_taxes' => 'decimal:2',
+        'total_amount' => 'decimal:2',
     ];
 
     public function user(): BelongsTo

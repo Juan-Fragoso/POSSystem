@@ -2,14 +2,15 @@
 
 namespace App\Livewire\Customers;
 
-use Illuminate\Validation\ValidationException;
 use App\Livewire\Forms\CustomerForm;
 use App\Models\Customer;
+use Illuminate\Validation\ValidationException;
 use Livewire\Component;
 
 class CustomerCrud extends Component
 {
     public CustomerForm $form;
+
     public bool $isEdit = false;
 
     public function mount(?Customer $customer = null)
@@ -28,7 +29,7 @@ class CustomerCrud extends Component
             session()->flash('notify', [
                 'variant' => 'success',
                 'title' => '¡Existoso!',
-                'message' =>  $this->isEdit ? 'Cliente actualizado correctamente.' : 'Cliente guardado correctamente.'
+                'message' => $this->isEdit ? 'Cliente actualizado correctamente.' : 'Cliente guardado correctamente.',
             ]);
 
             return $this->redirect(route('customers.index'), navigate: true);
@@ -39,7 +40,7 @@ class CustomerCrud extends Component
             session()->flash('notify', [
                 'variant' => 'error',
                 'title' => '¡Error!',
-                'message' => 'No se pudo guardar: ' . $e->getMessage()
+                'message' => 'No se pudo guardar: '.$e->getMessage(),
             ]);
         }
     }
