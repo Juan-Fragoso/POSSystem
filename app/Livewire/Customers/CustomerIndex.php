@@ -7,7 +7,6 @@ use Livewire\Component;
 
 class CustomerIndex extends Component
 {
-
     public $customerIdBeingDeleted = null;
 
     public function render()
@@ -16,7 +15,7 @@ class CustomerIndex extends Component
             ->orderBy('created_at', 'desc')
             ->paginate(10);
 
-        return view('livewire.customers.customer-index', ['customers'=> $customers]);
+        return view('livewire.customers.customer-index', ['customers' => $customers]);
     }
 
     public function confirmDelete($id)
@@ -42,7 +41,7 @@ class CustomerIndex extends Component
             $this->dispatch('notify',
                 variant: 'error',
                 title: '¡Error!',
-                message: 'No se pudo eliminar: ' . $e->getMessage()
+                message: 'No se pudo eliminar: '.$e->getMessage()
             );
             throw $e;
         }

@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('folio', 50)->unique();
             $table->string('name', 250)->nullable();
-            $table->string('last_name',250);
+            $table->string('last_name', 250);
             $table->string('legal_name', 250)->nullable();
             $table->string('rfc', 15)->nullable();
             $table->string('fiscal_address_zip', 10)->nullable();

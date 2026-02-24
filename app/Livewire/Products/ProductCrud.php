@@ -9,11 +9,12 @@ use Livewire\Component;
 class ProductCrud extends Component
 {
     public ProductForm $form;
+
     public bool $isEdit = false;
 
     public function mount(?Product $product = null)
     {
-        if($product && $product->exists) {
+        if ($product && $product->exists) {
             $this->isEdit = true;
             $this->form->setProduct($product);
         }

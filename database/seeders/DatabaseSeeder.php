@@ -5,15 +5,15 @@ namespace Database\Seeders;
 use App\Models\Module;
 use App\Models\Permission;
 use App\Models\User;
+use Illuminate\Database\Seeder;
 use Spatie\Permission\Models\Role;
 use Spatie\Permission\PermissionRegistrar;
-use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
 {
     public function run(): void
     {
-       // 1. Limpiar la caché de Spatie
+        // 1. Limpiar la caché de Spatie
         app()[PermissionRegistrar::class]->forgetCachedPermissions();
 
         // 2. Ejecutar la creación en orden
@@ -50,7 +50,7 @@ class DatabaseSeeder extends Seeder
                 [
                     'name' => $permissionName,
                     'module_id' => $module->id,
-                    'guard_name' => 'web' // Spatie lo requiere
+                    'guard_name' => 'web', // Spatie lo requiere
                 ]
             );
         }

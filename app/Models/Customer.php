@@ -31,6 +31,6 @@ class Customer extends Model
     // Método de ayuda para saber si es un usuario
     public function hasLoginAccess()
     {
-        return !is_null($this->user_id);
+        return ! is_null($this->user_id);
     }
 }

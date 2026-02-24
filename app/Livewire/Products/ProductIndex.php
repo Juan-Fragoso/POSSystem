@@ -11,6 +11,7 @@ class ProductIndex extends Component
     use WithPagination;
 
     public $search = '';
+
     public ?int $productIdBeingDeleted = null;
 
     public function updatingSearch()
@@ -22,13 +23,13 @@ class ProductIndex extends Component
     {
         $products = Product::query()
             ->when($this->search, function ($query) {
-                $query->where('name', 'like', '%' . $this->search . '%')
-                      ->orWhere('code', 'like', '%' . $this->search . '%');
+                $query->where('name', 'like', '%'.$this->search.'%')
+                    ->orWhere('code', 'like', '%'.$this->search.'%');
             })
             ->orderBy('created_at', 'desc')
             ->paginate(10);
 
-        return view('livewire.products.product-index', ['products'=> $products]);
+        return view('livewire.products.product-index', ['products' => $products]);
     }
 
     public function confirmDelete($id)
