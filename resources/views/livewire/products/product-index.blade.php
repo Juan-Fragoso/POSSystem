@@ -47,24 +47,23 @@
         </flux:table>
     </flux:main>
 
-    <flux:modal name="delete-product" class="min-w-88">
-        <div class="space-y-6">
-            <div>
-                <flux:heading size="lg">¿Eliminar registro?</flux:heading>
-                <flux:subheading>Estás a punto de eliminar este producto. Esta acción no se puede deshacer.
-                </flux:subheading>
-            </div>
-
-            <div class="flex gap-2">
-                <flux:spacer />
-                <flux:modal.close>
-                    <flux:button variant="ghost">Cancelar</flux:button>
-                </flux:modal.close>
-
-                <flux:button wire:click="delete" variant="danger">
-                    Confirmar Eliminación
-                </flux:button>
-            </div>
+    <flux:modal name="delete-product" class="min-w-88" <div class="space-y-6">
+        <div>
+            <flux:heading size="lg">¿Eliminar registro?</flux:heading>
+            <flux:subheading>Estás a punto de eliminar este producto. Esta acción no se puede deshacer.
+            </flux:subheading>
         </div>
-    </flux:modal>
+
+        <div class="flex gap-2">
+            <flux:spacer />
+            <flux:modal.close>
+                <flux:button variant="ghost">Cancelar</flux:button>
+            </flux:modal.close>
+
+            <flux:button wire:click="delete" variant="danger">
+                Confirmar Eliminación
+            </flux:button>
+        </div>
+</div>
+</flux:modal>
 </div>
